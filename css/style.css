@@ -1,5 +1,6 @@
 :root {
   --blue-light: #60dbff;
+  --blue-medium: #4BA9C5;
   --white: #fff;
   --background: #121517; }
 
@@ -62,8 +63,11 @@ body {
     border-color: var(--blue-light); }
 
 .projects-1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
   width: 80%;
-  height: 80%; }
+  height: 100%; }
   .projects-1__header {
     display: flex;
     justify-content: space-around;
@@ -71,7 +75,7 @@ body {
     color: var(--blue-light);
     font-size: 4rem;
     font-weight: 500;
-    padding-bottom: 1.5rem; }
+    margin: 1rem 0 2.5rem 0; }
     .projects-1__header h2 {
       font-size: inherit;
       font-weight: inherit; }
@@ -82,20 +86,66 @@ body {
     width: 30%; }
   .projects-1__text {
     display: flex;
-    justify-content: space-around;
     align-items: center;
     color: var(--white);
     text-align: center;
     font-size: 1.7rem;
     line-height: 1.7;
-    padding-bottom: 2rem; }
+    margin-bottom: 2.5rem; }
+  .projects-1__skills {
+    display: flex;
+    justify-content: center;
+    color: var(--blue-light);
+    margin-bottom: 2.5rem; }
+    .projects-1__skills p {
+      padding: 0 2rem;
+      border: 2px solid var(--blue-light);
+      border-radius: 1rem;
+      margin: 0 2rem;
+      cursor: default; }
   .projects-1__image {
     background-image: url(../img/hopper.jpg);
     background-size: cover;
     background-position: center;
-    height: 80%;
+    height: 60%;
     border-radius: 1rem;
-    box-shadow: 1rem 1rem 4rem rgba(0, 0, 0, 0.8); }
+    box-shadow: 1rem 1rem 4rem rgba(0, 0, 0, 0.8);
+    margin-bottom: 2.5rem; }
+  .projects-1__buttons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center; }
+    .projects-1__buttons--1, .projects-1__buttons--2 {
+      text-decoration: none;
+      color: var(--blue-light);
+      border: 2px solid var(--blue-light);
+      padding: 1.5rem 5rem;
+      border-radius: 1rem; }
+    .projects-1__buttons--1:hover, .projects-1__buttons--2:hover {
+      background-color: var(--blue-light);
+      color: var(--white);
+      transform: translateY(-3px);
+      box-shadow: 1rem 1rem 4rem rgba(0, 0, 0, 0.8); }
+
+.about-me__content {
+  width: 80%;
+  height: 100%; }
+  .about-me__content--header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: var(--blue-light);
+    font-size: 4rem;
+    font-weight: 500;
+    padding: 5rem 0; }
+    .about-me__content--header h2 {
+      font-size: inherit;
+      font-weight: inherit; }
+  .about-me__content--header:before, .about-me__content--header:after {
+    display: inline-block;
+    content: "";
+    border: 2px solid rgba(225, 225, 225, 0.8);
+    width: 30%; }
 
 .header {
   background-image: url("../img/portrait.jpg");
@@ -122,6 +172,14 @@ body {
   width: 25rem; }
 
 .projects {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--background);
+  height: 100vh; }
+
+.about-me {
   display: flex;
   flex-direction: column;
   justify-content: center;
