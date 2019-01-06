@@ -1,7 +1,7 @@
 :root {
   --blue-light: #60dbff;
   --blue-medium: #4BA9C5;
-  --white: #fff;
+  --white: #E8E8E8;
   --background: #121517; }
 
 * {
@@ -17,6 +17,9 @@ body {
   font-size: 1.7rem;
   font-weight: 400;
   line-height: 1.6; }
+
+.blue {
+  color: var(--blue-light); }
 
 .main-nav {
   display: relative;
@@ -62,72 +65,79 @@ body {
     color: var(--blue-light);
     border-color: var(--blue-light); }
 
-.projects-1 {
+.projects {
+  padding-bottom: 4rem; }
+  .projects-1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 80%;
+    height: 100%; }
+    .projects-1__header {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      color: var(--blue-light);
+      font-size: 4rem;
+      font-weight: 500;
+      margin: 1rem 0 2.5rem 0; }
+      .projects-1__header h2 {
+        font-size: inherit;
+        font-weight: inherit; }
+    .projects-1__header:before, .projects-1__header:after {
+      display: inline-block;
+      content: "";
+      border: 2px solid rgba(225, 225, 225, 0.8);
+      width: 30%; }
+    .projects-1__text {
+      display: flex;
+      align-items: center;
+      color: var(--white);
+      text-align: center;
+      font-size: 1.7rem;
+      line-height: 1.7;
+      margin-bottom: 2.5rem; }
+    .projects-1__skills {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: var(--blue-light);
+      margin-bottom: 2.5rem; }
+      .projects-1__skills p {
+        padding: 0 2rem;
+        border: 2px solid var(--blue-light);
+        border-radius: 1rem;
+        margin: 0 2rem;
+        cursor: default; }
+    .projects-1__image {
+      background-image: url(../img/hopper.jpg);
+      background-size: cover;
+      background-position: center;
+      height: 60%;
+      border-radius: 1rem;
+      box-shadow: 1rem 1rem 4rem rgba(0, 0, 0, 0.8);
+      margin-bottom: 2.5rem; }
+    .projects-1__buttons {
+      display: flex;
+      justify-content: space-around;
+      align-items: center; }
+      .projects-1__buttons--1, .projects-1__buttons--2 {
+        text-decoration: none;
+        color: var(--blue-light);
+        border: 2px solid var(--blue-light);
+        padding: 1.5rem 5rem;
+        border-radius: 1rem;
+        transition: all .2s; }
+      .projects-1__buttons--1:hover, .projects-1__buttons--2:hover {
+        background-color: var(--blue-light);
+        color: var(--white);
+        transform: translateY(-3px);
+        box-shadow: 1rem 1rem 4rem rgba(0, 0, 0, 0.8); }
+
+.about-me__content {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  width: 80%;
-  height: 100%; }
-  .projects-1__header {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    color: var(--blue-light);
-    font-size: 4rem;
-    font-weight: 500;
-    margin: 1rem 0 2.5rem 0; }
-    .projects-1__header h2 {
-      font-size: inherit;
-      font-weight: inherit; }
-  .projects-1__header:before, .projects-1__header:after {
-    display: inline-block;
-    content: "";
-    border: 2px solid rgba(225, 225, 225, 0.8);
-    width: 30%; }
-  .projects-1__text {
-    display: flex;
-    align-items: center;
-    color: var(--white);
-    text-align: center;
-    font-size: 1.7rem;
-    line-height: 1.7;
-    margin-bottom: 2.5rem; }
-  .projects-1__skills {
-    display: flex;
-    justify-content: center;
-    color: var(--blue-light);
-    margin-bottom: 2.5rem; }
-    .projects-1__skills p {
-      padding: 0 2rem;
-      border: 2px solid var(--blue-light);
-      border-radius: 1rem;
-      margin: 0 2rem;
-      cursor: default; }
-  .projects-1__image {
-    background-image: url(../img/hopper.jpg);
-    background-size: cover;
-    background-position: center;
-    height: 60%;
-    border-radius: 1rem;
-    box-shadow: 1rem 1rem 4rem rgba(0, 0, 0, 0.8);
-    margin-bottom: 2.5rem; }
-  .projects-1__buttons {
-    display: flex;
-    justify-content: space-around;
-    align-items: center; }
-    .projects-1__buttons--1, .projects-1__buttons--2 {
-      text-decoration: none;
-      color: var(--blue-light);
-      border: 2px solid var(--blue-light);
-      padding: 1.5rem 5rem;
-      border-radius: 1rem; }
-    .projects-1__buttons--1:hover, .projects-1__buttons--2:hover {
-      background-color: var(--blue-light);
-      color: var(--white);
-      transform: translateY(-3px);
-      box-shadow: 1rem 1rem 4rem rgba(0, 0, 0, 0.8); }
-
-.about-me__content {
   width: 80%;
   height: 100%; }
   .about-me__content--header {
@@ -137,7 +147,7 @@ body {
     color: var(--blue-light);
     font-size: 4rem;
     font-weight: 500;
-    padding: 5rem 0; }
+    margin: 1rem 0 2.5rem 0; }
     .about-me__content--header h2 {
       font-size: inherit;
       font-weight: inherit; }
@@ -146,6 +156,50 @@ body {
     content: "";
     border: 2px solid rgba(225, 225, 225, 0.8);
     width: 30%; }
+  .about-me__content--employer {
+    text-align: center;
+    color: var(--white);
+    font-size: 3rem;
+    font-weight: 300;
+    margin-bottom: 2.5rem; }
+    .about-me__content--employer h3 {
+      color: #fff;
+      font-size: inherit;
+      font-weight: inherit; }
+  .about-me__content--text {
+    color: var(--white);
+    text-align: center;
+    font-size: 1.7rem;
+    line-height: 1.7;
+    margin-bottom: 2.5rem; }
+  .about-me__content--skills {
+    display: flex;
+    justify-content: space-around; }
+    .about-me__content--skills--card {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      color: var(--white);
+      border-radius: 1rem;
+      height: 40rem;
+      width: 30rem; }
+      .about-me__content--skills--card-header {
+        margin: 2.5rem 0;
+        color: var(--blue-light);
+        font-size: 2.5rem;
+        font-weight: 400;
+        letter-spacing: 1px; }
+        .about-me__content--skills--card-header h4 {
+          font-size: inherit;
+          font-weight: inherit; }
+      .about-me__content--skills--card ul {
+        list-style: none; }
+      .about-me__content--skills--card-list {
+        color: var(--white);
+        font-size: 1.7rem;
+        text-align: center;
+        line-height: 1.7; }
 
 .header {
   background-image: url("../img/portrait.jpg");
@@ -185,4 +239,4 @@ body {
   justify-content: center;
   align-items: center;
   background-color: var(--background);
-  height: 100vh; }
+  height: 80vh; }
