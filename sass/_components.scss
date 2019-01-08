@@ -1,3 +1,72 @@
+//////////////////////////////////////////////
+////////// REUSABLE COMPONENTS ///////////////
+
+.section-header {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	align-self: stretch;
+	color: var(--blue-light);
+	font-size: 4rem;
+	font-weight: 500;
+	margin: 1rem 0 2.5rem 0;
+	// height: 10%;
+
+	h2 {
+		font-size: inherit;
+		font-weight: inherit;
+	}
+
+	&:before,
+	&:after {
+		display: inline-block;
+		content: "";
+		border: 2px solid rgba(225, 225, 225, 0.8);
+		width: 30%;
+
+		@media only screen and (max-width: $bp-medium) {
+			width: 25%;
+		}
+
+		@media only screen and (max-width: $bp-small) {
+			width: 20%;
+		}
+	}
+}
+
+.button {
+	text-decoration: none;
+	color: var(--blue-light);
+	border: 2px solid var(--blue-light);
+	padding: 1.5rem 5rem;
+	border-radius: 1rem;
+	transition: all .2s;	
+
+	@media only screen and (max-width: $bp-medium) {
+		padding: 1rem 3rem;
+	}
+
+	&:not(:last-child) {
+		@media only screen and (max-width: $bp-smaller) {
+			margin-bottom: 2.5rem;			
+		}
+	}
+
+	&:hover {
+		background-color: var(--blue-light);
+		color: var(--white);
+		transform: translateY(-3px);
+		box-shadow: 1rem 1rem 4rem rgba(0,0,0,.8);
+
+		@media only screen and (max-width: $bp-small) {
+
+		}
+	}
+}
+
+//////////////////////////////////////////////
+///////////////// HEADER ///////////////////
+
 .main-nav {
 	display: relative;
 	margin-left: 3rem;
@@ -66,39 +135,18 @@
 	}
 }
 
+//////////////////////////////////////////////
+////////////// PROJECT SECTION ///////////////
+
 .projects {
-	padding-bottom: 4rem;
+	margin-top: 4rem;
+	margin-bottom: 4rem;
 
 	&-1 {
 		display: flex;
 		flex-direction: column;
 		justify-content: flex-start;
-		width: 80%;
-		height: 100%;
-
-		&__header {
-			display: flex;
-			justify-content: space-around;
-			align-items: center;
-			color: var(--blue-light);
-			font-size: 4rem;
-			font-weight: 500;
-			margin: 1rem 0 2.5rem 0;
-			// height: 10%;
-
-			h2 {
-				font-size: inherit;
-				font-weight: inherit;
-			}
-		}
-
-		&__header:before,
-		&__header:after {
-			display: inline-block;
-			content: "";
-			border: 2px solid rgba(225, 225, 225, 0.8);
-			width: 30%;
-		}
+		width: 95%; // Used 95% for a slightly round feel to the text area
 
 		&__text {
 			display: flex;
@@ -128,13 +176,16 @@
 		}
 
 		&__image {
-			background-image: url(../img/hopper.jpg);
-			background-size: cover;
-			background-position: center;
-			height: 60%;
-			border-radius: 1rem;
-			box-shadow: 1rem 1rem 4rem rgba(0,0,0,.8);
-			margin-bottom: 2.5rem;
+			display: flex;
+			justify-content: center;
+			align-items: flex-start;
+			margin: 0 auto 2.5rem auto;
+
+			&--photo {
+				width: 50%;
+				border-radius: 1rem;
+				margin: 0 auto;
+			}
 		}
 
 		&__buttons {
@@ -142,59 +193,25 @@
 			justify-content: space-around;
 			align-items: center;
 
-			&--1,
-			&--2 {
-				text-decoration: none;
-				color: var(--blue-light);
-				border: 2px solid var(--blue-light);
-				padding: 1.5rem 5rem;
-				border-radius: 1rem;
-				transition: all .2s;
-
+			@media only screen and (max-width: $bp-smaller) {
+				flex-direction: column;
 			}
 
-			&--1:hover,
-			&--2:hover {
-				background-color: var(--blue-light);
-				color: var(--white);
-				transform: translateY(-3px);
-				box-shadow: 1rem 1rem 4rem rgba(0,0,0,.8);
-			}
 		}
 	}
 }
 
+//////////////////////////////////////////////
+///////////// ABOUT ME SECTION ///////////////
+
 .about-me {
+	margin-bottom: 4rem;
 
 	&__content {
 		display: flex;
 		flex-direction: column;
 		justify-content: flex-start;
-		width: 80%;
-		height: 100%;
-
-		&--header {
-			display: flex;
-			justify-content: space-around;
-			align-items: center;
-			color: var(--blue-light);
-			font-size: 4rem;
-			font-weight: 500;
-			margin: 1rem 0 2.5rem 0;
-
-			h2 {
-				font-size: inherit;
-				font-weight: inherit;
-			}
-		}
-
-		&--header:before,
-		&--header:after {
-			display: inline-block;
-			content: "";
-			border: 2px solid rgba(225, 225, 225, 0.8);
-			width: 30%;
-		}
+		width: 95%; // Used 95% for a slightly round feel to the text area
 
 		&--employer {
 			text-align: center;
@@ -230,8 +247,8 @@
 				align-items: center;
 				color: var(--white);
 				border-radius: 1rem;
-				height: 40rem;
 				width: 30rem;
+				margin-bottom: 2.5rem;
 
 				&-header {
 					margin: 2.5rem 0;
@@ -257,8 +274,82 @@
 					line-height: 1.7;
 				}
 			}
+		}
 
+		&--resume--text {
+			text-align: center;
+			color: var(--white);
+			font-size: 2.75rem;
+			font-weight: 300;
+			margin-bottom: 2.5rem;
 
+			h4 {
+				color: #fff;
+				font-size: inherit;
+				font-weight: inherit;
+			}
+
+		}
+
+		&--resume--download {
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+		}
+	}
+}
+
+//////////////////////////////////////////////
+/////////// CONTACT ME SECTION ///////////////
+
+.contact {
+	margin: 0 auto;
+	width: 95%;
+
+	&__form {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: center;
+		width: 55%;
+		margin-bottom: 2.5rem;
+
+		&--input {
+			align-self: stretch;
+			text-decoration: none;
+			background-color: transparent;
+			color: var(--white);
+			border: none;
+			border-bottom: 2px solid var(--blue-light);
+			padding: 1.5rem 2rem;
+			text-align: left;
+			outline: none;
+			font-family: 'Open Sans', sans-serif;   // Adding to have the text area be the same font as input
+
+			&:not(:last-child) {
+				margin-bottom: 2.5rem;
+			}
+
+			&:focus {
+				outline: none;
+			}
+
+			&-button  {
+				text-decoration: none;
+				color: var(--blue-light);
+				border: 2px solid var(--blue-light);
+				padding: 1.5rem 5rem;
+				border-radius: 1rem;
+				transition: all .2s;
+				background-color: transparent;
+
+				&:hover {
+					background-color: var(--blue-light);
+					color: var(--white);
+					transform: translateY(-3px);
+					box-shadow: 1rem 1rem 4rem rgba(0,0,0,.8);
+				}
+			}
 		}
 	}
 }

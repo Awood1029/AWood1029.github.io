@@ -21,6 +21,11 @@
 
 }
 
+.container {
+	max-width: 120rem;
+	margin: 0 auto;
+}
+
 .side-bar {
 	display: flex;
 	flex-direction: column;
@@ -34,8 +39,6 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	background-color: var(--background);
-	height: 100vh;
 }
 
 .about-me {
@@ -43,6 +46,11 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	background-color: var(--background);
-	height: 80vh;
+}
+
+.contact {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
