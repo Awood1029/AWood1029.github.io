@@ -1,38 +1,46 @@
 :root {
-	--blue-light: #60dbff;
-	--blue-medium: #4BA9C5;
+    --color-primary: #673897;
+    --color-primary-light: #CAB0E5;
+    --color-primary-dark: #222e34;
 
-	--white: #E8E8E8;
+    --color-grey-light-1: #faf9f9;
+    --color-grey-light-2: #f4f2f2;
+    --color-grey-light-3: #f0eeee;
+    --color-grey-light-4: #ccc;
 
-	--background: #121517;
+    --color-blue-1: #d8e8ec;
+    --color-blue-2: #cddde8;
+    --color-blue-3: #c7d6db;
+    --color-blue-4: #b3c1c7;
+    --color-blue-5: #222e34;
+
+    
+    --color-grey-dark-1: #333;
+    --color-grey-dark-2: #777;
+    --color-grey-dark-3: #999;
 }
 
-$bp-medium: 46.875em; // 750px
-$bp-small: 34.375em; // 550px
-$bp-smaller: 25em; // 400px
-
-* {
-	padding: 0;
-	margin: 0;
-	box-sizing: border-box;
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
 }
 
 html {
-	font-size: 62.5%;
-
-	@media only screen and (max-width: $bp-small) {
-		font-size: 56.25%;
-	}
+    box-sizing: border-box;
+    font-size: 62.5%;
+    height: 100%;
 }
 
 body {
-	font-family: 'Open Sans', sans-serif;
-	font-size: 1.7rem;
-	font-weight: 400;
-	line-height: 1.6;
-	background-color: var(--background);
-}
-
-.blue {
-	color: var(--blue-light);
+    font-family: 'Raleway', sans-serif;
+    color: var(--color-blue-5);
+    font-weight: 300;
+    line-height: 1.6;
+    letter-spacing: .1rem;
+    height: 100vh;
+    position: relative;
+    background-color: var(--color-blue-1);
 }

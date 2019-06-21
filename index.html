@@ -1,138 +1,200 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="shortcut icon" type="image/png" href="img/favicon.png">
-        
-        <title>Arthur Wood &mdash; Web Solutions</title>
-    </head>
-    <body>
-        <header class="header">
-            <div class="side-bar">
-                <div class="main-nav">
-                    <ul class="main-nav__list">
-                        <li class="main-nav__list--item"><a href="#" class="main-nav__list--item--link">Home</a></li>
-                        <li class="main-nav__list--item"><a href="#projects" class="main-nav__list--item--link">Projects</a></li>
-                        <li class="main-nav__list--item"><a href="#about-me" class="main-nav__list--item--link">About Me</a></li>
-                        <li class="main-nav__list--item"><a href="#resume" class="main-nav__list--item--link">Resume</a></li>
-                        <li class="main-nav__list--item"><a href="#contact-me" class="main-nav__list--item--link">Contact</a></li>
-                    </ul>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:200,300,400,500,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="home-container">
+            <nav class="main-nav">
+                <h2 class="main-nav__logo">Arthur Wood</h2>
+                <ul class="main-nav__list">
+                    <li class="main-nav__list-item">
+                        <a href="#" class="main-nav__link">Home</a>
+                    </li>
+                    <li class="main-nav__list-item">
+                        <a href="#projects" class="main-nav__link">Projects</a>
+                    </li>
+                    <li class="main-nav__list-item">
+                        <a href="#about-me" class="main-nav__link">About Me</a>
+                    </li>
+                    <li class="main-nav__list-item">
+                        <a href="#" class="main-nav__link">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <header class="header">
+                <h1 class="header__name">
+                    <!-- I'm Arthur Wood -->
+                    <span class="header__name--1 header__name-letter">I</span>
+                    <span class="header__name--2 header__name-letter">'</span>
+                    <span class="header__name--3 header__name-letter">m</span>
+                    <span class="header__name-letter">&nbsp;</span>
+                    <span class="header__name--4 header__name-letter">A</span>
+                    <span class="header__name--5 header__name-letter">r</span>
+                    <span class="header__name--6 header__name-letter">t</span>
+                    <span class="header__name--7 header__name-letter">h</span>
+                    <span class="header__name--8 header__name-letter">u</span>
+                    <span class="header__name--9 header__name-letter">r</span>
+                    <span class="header__name-letter">&nbsp;</span>
+                    <span class="header__name--10 header__name-letter">W</span>
+                    <span class="header__name--11 header__name-letter">o</span>
+                    <span class="header__name--12 header__name-letter">o</span>
+                    <span class="header__name--13 header__name-letter">d</span>
+                </h1>
+                <p class="header__text">
+                    A full-stack developer specializing in <span id="highlight">ReactJS</span>
+                    and <span id="highlight">C# backend</span> technologies
+                </p>
+            </header>
+
+            <div id="about-me" class="console">
+
+                <div class="console__input-output console__input-output--1">
+                    <h3 class="console__input">
+                        > Arthur.currentOccupation
+                    </h3>
+                    <h3 class="console__output">
+                        ''Software Engineer Intern, ChartLogic''
+                    </h3>
+                </div>
+
+                <div class="console__input-output console__input-output--2">
+                    <h3 class="console__input">
+                        > Arthur.contactInfo
+                    </h3>
+                    <h3 class="console__output">
+                        [''<a id="link" href="mailto:cwarthur1029@gmail.com">cwarthur1029@gmail.com</a>'',
+                        ''<a id="link" href="https://github.com/Awood1029">GitHub</a>'',
+                        ''<a id="link" href="https://www.linkedin.com/in/arthur-wood-60739013b/">LinkedIn</a>'']
+                    </h3>
+                </div>
+
+            
+                <div class="console__input-output console__input-output--3">
+                    <h3 class="console__input">
+                        > Arthur.resume
+                    </h3>
+                    <h3 class="console__output">
+                        ''Resume.pdf''
+                    </h3>
+                </div>
+                    
+                <div class="console__input-output console__input-output--4">
+                    <h3 class="console__input">
+                        > Arthur.skills
+                    </h3>
+                    <h3 class="console__output">
+                        [''C# ASP.NET'', ''Java'', ''JavaScripit'', ''React'', ''Redux'',
+                    </h3>
+                    <h3 class="console__output">
+                            ''WPF'', ''SQL'', ''Entity Framework'', ''Python'', ''HTML5'', ''CSS'']
+                    </h3>
+                </div>    
+                
+                <div class="console__input-output console__input-output--5">
+                    <h3 class="console__input">
+                        > Arthur.interests
+                    </h3>
+                    <h3 class="console__output">
+                        [''Photography''. ''Hiking'', ''Camping'', ''Mountain Biking'', 
+                    </h3>
+                    <h3 class="console__output">
+                        ''Piano'', ''Guitar'', ''Drums'', ''Star Gazing'']
+                    </h3>
+                </div>
+
+                <div class="console__input-output console__input-output--6">
+                    <h3 class="console__input">
+                        > Arthur.isSeeking
+                    </h3>
+                    <h3 class="console__output">
+                        ''Fullstack Engineer Position''
+                    </h3>
                 </div>
             </div>
+    </div>
 
-            <div class="header__content">
-                <div class="header__content--text">
-                    <h1>Arthur Wood</h1>
-                    <h2>Software Engineer</h2>
-                </div>
-                <a href="#contact-me" class="header__content--button">Let's Talk</a>
+    <section id="projects" class="projects">
+        <div class="projects-card">
+            <div id="booksy-image" class="projects-card__image-box">
             </div>
-        </header>
-
-        <div class="container">
-            <section class="projects">
-                <div class="projects-1">
-                    <div class="projects-1__header section-header">
-                        <h2><a id="projects">Projects</a></h2>
-                    </div>
-                    <div class="projects-1__text">
-                        <p>Hopper is a fictional flight booking website that I created from scratch based off the design by Setyono Dwi. I built Hopper using HTML5, CSS, and SASS.
-                        I utilized features such as Flexbox, CSS variables, and SASS mixins for this site. I learned a tremendous amount through this project as it was my first website ever built outside of schoolwork.</p>
-                    </div>
-                    <div class="projects-1__skills">
-                        <p class="projects-1__skills--1">HTML5</p>
-                        <p class="projects-1__skills--2">CSS</p>
-                        <p class="projects-1__skills--3">SASS</p>
-                    </div>
-                    <figure class="projects-1__image">
-                        <img src="../img/hopper.jpg" alt="Hopper Screenshot" class="projects-1__image--photo">
-                    </figure>
-                    <div class="projects-1__buttons">
-                        <a href="https://awood1029.github.io/Hopper" class="projects-1__buttons--1 button">View Website</a>
-                        <a href="https://github.com/Awood1029/Hopper" class="projects-1__buttons--2 button">Source Code</a>
-                    </div>
-                </div>
-            </section>
-
-            <section class="about-me">
-                <div class="about-me__content">
-                    <div class="about-me__content--header section-header">
-                        <h2><a id="about-me">About Me</a></h2>
-                    </div>
-                    <div class="about-me__content--employer">
-                        <h3>Current Occupation: Cyber Security Engineer at General Electric</h3>
-                    </div>
-                    <div class="about-me__content--text">
-                        Hi, I'm Arthur, an incredibly ambitious software developer based out of Richmond, Virginia. I started my career out in the Cyber Security field, interning as a DevOps Engineer at General Electric. After the conclusion of my internship, I was hired on full-time at General Electric as a Cyber Security Engineer. Outside of work I am progressing through my computer science classes at Western Governors University. Beyond work and school, I work on personal projects that I am passionate about, and attend tech events such as the recent VCU Hackathon that I placed 2nd place in. Here is a look into my skill set.
-                    </div>
-                    <div class="about-me__content--skills">
-                        <div class="about-me__content--skills--card">
-                            <div class="about-me__content--skills--card-header">
-                                <h4>Languages</h4>
-                            </div>
-                            <div class="about-me__content--skills--card-list">
-                                <ul>
-                                    <li>Python</li>
-                                    <li>JavaScript</li>
-                                    <li>Java</li>
-                                    <li>Ruby</li>
-                                    <li>C++</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="about-me__content--skills--card">
-                            <div class="about-me__content--skills--card-header">
-                                <h4>Front-End</h4>
-                            </div>
-                            <div class="about-me__content--skills--card-list">
-                                <ul>
-                                    <li>HTML5</li>
-                                    <li>CSS</li>
-                                    <li>JavaScript</li>
-                                    <li>SASS</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="about-me__content--skills--card">
-                            <div class="about-me__content--skills--card-header">
-                                <h4>Other</h4>
-                            </div>
-                            <div class="about-me__content--skills--card-list">
-                                <ul>
-                                    <li>AWS</li>
-                                    <li>Linux </li>
-                                    <li>SaltStack</li>
-                                    <li>JavaFX</li>
-                                    <li>Scene Builder</li>
-                                    <li>Agile</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="about-me__content--resume--text">
-                        <h4><a id="resume">Please feel free to download my resume</a></h4>
-                    </div>
-                    <div class="about-me__content--resume--download">
-                        <a href="../files/Wood, Arthur - Resume.pdf" class="about-me__content--resume--download-link button" download>Download PDF</a>
+            <div class="projects-card__content">
+                <div class="projects-card__content-text">
+                    <h3 class="projects-card__content-title">Booksy</h3>
+                    <p class="projects-card__content-summary">
+                        Booksy was my very first full-stack personal project. 
+                        This full-stack web app utilizes <span id="highlight">Google's Book API</span>
+                        to allow users to search
+                        for books, and then "favorite" books of their choice which then get
+                        stored in a <span id="highlight">SQL Server</span> 
+                        database via a self-built <span id="highlight">ASP.NET API</span>.
+                    </p>
+                    <div class="projects-card__content-tags">
+                        <p class="projects-card__content-tag">ReactJS</p>
+                        <p class="projects-card__content-tag">Redux</p>
+                        <p class="projects-card__content-tag">C#</p>
+                        <p class="projects-card__content-tag">ASP.NET</p>
+                        <p class="projects-card__content-tag">Entity Framework Core</p>
+                        <p class="projects-card__content-tag">JavaScript</p>
+                        <p class="projects-card__content-tag">Google Books API</p>
+                        <p class="projects-card__content-tag">ES6</p>
+                        <p class="projects-card__content-tag">HTML</p>
+                        <p class="projects-card__content-tag">CSS</p>
+                        <p class="projects-card__content-tag">SASS</p>
                     </div>
                 </div>
-            </section>
-
-            <section class="contact">
-                <div class="contact__header section-header">
-                    <h2><a id="contact-me">Contact Me</a></h2>
+                <div class="projects-card__content-buttons">
+                    <a href="#" class="projects-card__content-button">
+                        View Demo
+                    </a href="#">
+                    <a href="#" class="projects-card__content-button">
+                        View Code
+                    </a href="#">
                 </div>
-                <form action="#" class="contact__form">
-                    <input type="text" class="contact__form--input" placeholder="Your Name" name="name" required>
-                    <input type="text" class="contact__form--input" placeholder="Your Email" name="email" required>
-                    <textarea class="contact__form--input" placeholder="Message" name="message" row=6 required></textarea>
-                    <input type="submit" class="contact__form--input-button">
-                </form>
-            </section>
+            </div>
+            
         </div>
-    </body>
+
+        <div class="projects-card">
+            <div id="hopper-image" class="projects-card__image-box">
+            </div>
+            <div class="projects-card__content">
+                <div class="projects-card__content-text">
+                    <h3 class="projects-card__content-title">Hopper</h3>
+                    <p class="projects-card__content-summary">
+                            Hopper is a fictional flight booking website that I created
+                            from scratch based off the design by <span id="highlight">Setyono Dwi</span>.
+                            I built Hopper
+                            using <span id="highlight">HTML5</span>, <span id="highlight">CSS</span>,
+                            and <span id="highlight">SASS</span>. I utilized features such as Flexbox,
+                            CSS variables, and SASS mixins for this site. I learned a tremendous
+                            amount through this project as it was my first website ever built outside
+                            of schoolwork.
+                    </p>
+                    <div class="projects-card__content-tags">
+                        <p class="projects-card__content-tag">HTML</p>
+                        <p class="projects-card__content-tag">CSS</p>
+                        <p class="projects-card__content-tag">SASS</p>
+                    </div>
+                </div>
+                <div class="projects-card__content-buttons">
+                    <a href="https://awood1029.github.io/Hopper/" target="_blank" class="projects-card__content-button">
+                        View Demo
+                    </a>
+                    <a href="https://github.com/Awood1029/Hopper" target="_blank" class="projects-card__content-button">
+                        View Code
+                    </a>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+</body>
 </html>
