@@ -20,6 +20,11 @@
     --color-grey-dark-3: #999;
 }
 
+$bp-largest: 75em;
+$bp-large: 65.5em;
+$bp-medium-large: 56.25em;
+$bp-medium: 44.375em;
+
 *,
 *::before,
 *::after {
@@ -32,6 +37,22 @@ html {
     box-sizing: border-box;
     font-size: 62.5%;
     height: 100%;
+
+    @media only screen and (max-width: $bp-largest) {
+        font-size: 55%;
+    }
+
+    @media only screen and (max-width: $bp-large) {
+        font-size: 50%;
+    }
+
+    @media only screen and (max-width: $bp-medium-large) {
+        // font-size: 50%;
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+        // font-size: 50%;
+    }
 }
 
 body {
@@ -40,7 +61,6 @@ body {
     font-weight: 300;
     line-height: 1.6;
     letter-spacing: .1rem;
-    height: 100vh;
     position: relative;
     background-color: var(--color-blue-1);
 }
